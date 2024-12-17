@@ -1,0 +1,11 @@
+<pre>{{ manteList | json }}</pre>
+
+<h2>Mante in via di estinzione</h2>
+<div *ngFor="let manta of manteList" *ngIf="manta.estinzione">
+  <p>{{ manta.nome_specie }} - {{ manta.colore }} - {{ manta.apertura_alare }}</p>
+</div>
+
+<h2>Mante non in via di estinzione</h2>
+<div *ngFor="let manta of manteList" *ngIf="!manta.estinzione">
+  <p>{{ manta.nome_specie }} - {{ manta.colore }} - {{ manta.apertura_alare }}</p>
+</div>
